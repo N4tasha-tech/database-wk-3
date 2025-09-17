@@ -1,26 +1,19 @@
 CREATE TABLE student (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    age INT CHECK (age > 0),      
-    gender VARCHAR(10) NOT NULL
+    id INT NOT NULL PRIMARY KEY,
+    fullName VARCHAR(100) NOT NULL,
+    age INT
 );
 
-INSERT INTO student (name, age, gender)
-VALUES ('Mark Mariko', 19, 'Male');
+INSERT INTO student (id, fullName, age)
+VALUES
+    (1, 'Grace Mwai', 21),
+    (2, 'Hannah Kimeto', 19),
+    (3, 'Maranga Maringo', 21),
+    (4, 'Jerusha Muga', 21),
+    (5, 'Ian Mwenja', 18);
 
-INSERT INTO student (name, age, gender)
-VALUES ('Norah Machego', 24, 'Female');
-
-INSERT INTO student (name, age, gender)
-VALUES ('Isabella Rossey', 22, 'Female');
-
-INSERT INTO student (name, age, gender)
-VALUES ('Chloe Wanjiku', 19, 'Female');
-
-INSERT INTO student (name, age, gender)
-VALUES ('Daniel Mareba', 21, 'Male');
-
-INSERT INTO student (name, age, gender)
-VALUES ('Eva Kangola', 23, 'Female');
+UPDATE student
+SET age = 20
+WHERE id = 2;
 
 
